@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "trailway",
+  "version": "${version}",
+  "name": "TangsRailway",
+  "description": "Simple railway addon of Minecraft Transit Railway mod",
+  "authors": [
+    "Xiaotang27"
+  ],
+  "contact": {
+    "website": "https://xiaotang27.github.io"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/trailway/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "group.trtimc.trailway.client.TrailwayClient"
+    ],
+    "main": [
+      "group.trtimc.trailway.Trailway"
+    ]
+  },
+  "mixins": [
+    "trailway.mixins.json",
+    {
+      "config": "trailway.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "mtr": ">=1.18.2-3.2.2"
+  }
+}
